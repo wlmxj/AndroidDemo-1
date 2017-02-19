@@ -64,7 +64,7 @@ public class BatteryActivity extends AppCompatActivity {
             if (intent.getAction() == Intent.ACTION_BATTERY_CHANGED){
                 int level = intent.getIntExtra("level",0);
                 int scale = intent.getIntExtra("scale",100);
-                mTv1.setText("广播方式：" + level + "%");
+                mTv1.setText("广播方式剩余电量：" + level + "%");
 
             }
         }
