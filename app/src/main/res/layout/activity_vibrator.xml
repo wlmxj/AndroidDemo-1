@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="振动一次"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        />
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="一直振动"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        />
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="关闭振动"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        />
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dingmouren.androiddemo">
+    <!--手机振动的权限-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!--获取手机通讯录权限-->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!--修改手机桌面的权限-->
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <!--获取SIM卡信息的权限-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--获取进程的权限-->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".demos.VibratorActivity"
+            android:launchMode="singleTask"
+            />
+        <activity android:name=".demos.ContactsActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".demos.SIMActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".demos.RuningTasksActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".demos.ScreenDirectionActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensor"/>
+    </application>
+
+</manifest>
