@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dingmouren.androiddemo.demos.BatteryActivity;
 import com.dingmouren.androiddemo.demos.ContactsActivity;
 import com.dingmouren.androiddemo.demos.RuningTasksActivity;
 import com.dingmouren.androiddemo.demos.SIMActivity;
@@ -77,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
                     case 5:
                         startActivity(new Intent(MainActivity.this, ScreenDirectionActivity.class));
                         break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this, BatteryActivity.class));
+                        break;
                 }
             }
         });
@@ -92,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add("获取SIM卡信息");
         mList.add("获取正在运行的服务信息");
         mList.add("重力感应切换屏幕方向");
+        mList.add("显示手机电量");
         mRecycler.setAdapter(mAdapter);
     }
 
