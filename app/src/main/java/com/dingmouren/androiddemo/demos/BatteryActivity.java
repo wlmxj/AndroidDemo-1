@@ -47,7 +47,7 @@ public class BatteryActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn1,R.id.btn2,R.id.btn3})
+    @OnClick({R.id.btn1,R.id.btn2})
     public void onClick(View view){
         switch (view.getId()){
             case R.id.btn1:

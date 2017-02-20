@@ -41,6 +41,8 @@
         <activity android:name=".demos.BatteryActivity"
             android:launchMode="singleTask"
             />
+        <activity android:name=".demos.EventActivity"
+            android:launchMode="singleTask"/>
 
 
         <!--广播-->
