@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <!--获取进程的权限-->
     <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!--打电话的权限-->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -25,27 +27,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".demos.VibratorActivity"
+        <activity android:name=".activity.VibratorActivity"
             android:launchMode="singleTask"
             />
-        <activity android:name=".demos.ContactsActivity"
+        <activity android:name=".activity.ContactsActivity"
             android:launchMode="singleTask"/>
-        <activity android:name=".demos.SIMActivity"
+        <activity android:name=".activity.SIMActivity"
             android:launchMode="singleTask"/>
-        <activity android:name=".demos.RuningTasksActivity"
+        <activity android:name=".activity.RuningTasksActivity"
             android:launchMode="singleTask"/>
-        <activity android:name=".demos.ScreenDirectionActivity"
+        <activity android:name=".activity.ScreenDirectionActivity"
             android:launchMode="singleTask"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="sensor"/>
-        <activity android:name=".demos.BatteryActivity"
+        <activity android:name=".activity.BatteryActivity"
             android:launchMode="singleTask"
             />
-        <activity android:name=".demos.EventActivity"
+        <activity android:name=".activity.EventActivity"
             android:launchMode="singleTask"/>
-        <activity android:name=".demos.RecyclerCustomAnimationActivity"
+        <activity android:name=".activity.RecyclerCustomAnimationActivity"
             android:launchMode="singleTask"/>
-
+        <activity android:name=".activity.Demo1Activity"/>
         <!--广播-->
     </application>
 

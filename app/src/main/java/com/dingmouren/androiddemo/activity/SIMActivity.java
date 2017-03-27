@@ -1,10 +1,9 @@
-package com.dingmouren.androiddemo.demos;
+package com.dingmouren.androiddemo.activity;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.telecom.TelecomManager;
 import android.telephony.TelephonyManager;
 import android.widget.TextView;
 import android.widget.Toast;

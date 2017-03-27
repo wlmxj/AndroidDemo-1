@@ -1,9 +1,14 @@
-package com.dingmouren.androiddemo.demos;
+package com.dingmouren.androiddemo.activity;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,18 +17,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dingmouren.androiddemo.R;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.IllegalFormatCodePointException;
 import java.util.List;
 
 /**
  * 获取手机通讯录中姓名和手机号码，添加权限 <uses-permission android:name="android.permission.READ_CONTACTS"/>
  */
 
-public class ContactsActivity extends AppCompatActivity {
+public class ContactsActivity extends AppCompatActivity  {
     private RecyclerView mRecycler;
     private Cursor mCursor;
     private MyAdapter mAdapter;
@@ -37,12 +44,14 @@ public class ContactsActivity extends AppCompatActivity {
 
     }
 
+
     private void initView() {
         mRecycler = (RecyclerView) findViewById(R.id.recycler);
         mAdapter = new MyAdapter(this);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
         mRecycler.setHasFixedSize(true);
-        mCursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,null,null,null,null);
+        Toast.makeText(this,"权限检测结果："+ContextCompat.checkSelfPermission(this,Manifest.permission.READ_CONTACTS),Toast.LENGTH_LONG).show();
+            mCursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null, null, null);
         mList.clear();
         if (mCursor == null) return;
         while (mCursor.moveToNext()){
@@ -54,6 +63,21 @@ public class ContactsActivity extends AppCompatActivity {
         mRecycler.setAdapter(mAdapter);
     }
 
+    /**
+     * 权限申请回调结果处理
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 222){
+            Toast.makeText(this,"从设置界面回来了",Toast.LENGTH_SHORT).show();
+        }
+    }
 
     /**
      * 实体类

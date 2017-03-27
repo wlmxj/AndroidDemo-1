@@ -12,14 +12,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dingmouren.androiddemo.demos.BatteryActivity;
-import com.dingmouren.androiddemo.demos.ContactsActivity;
-import com.dingmouren.androiddemo.demos.EventActivity;
-import com.dingmouren.androiddemo.demos.RecyclerCustomAnimationActivity;
-import com.dingmouren.androiddemo.demos.RuningTasksActivity;
-import com.dingmouren.androiddemo.demos.SIMActivity;
-import com.dingmouren.androiddemo.demos.ScreenDirectionActivity;
-import com.dingmouren.androiddemo.demos.VibratorActivity;
+import com.dingmouren.androiddemo.activity.BatteryActivity;
+import com.dingmouren.androiddemo.activity.ContactsActivity;
+import com.dingmouren.androiddemo.activity.Demo1Activity;
+import com.dingmouren.androiddemo.activity.EventActivity;
+import com.dingmouren.androiddemo.activity.RecyclerCustomAnimationActivity;
+import com.dingmouren.androiddemo.activity.RuningTasksActivity;
+import com.dingmouren.androiddemo.activity.SIMActivity;
+import com.dingmouren.androiddemo.activity.ScreenDirectionActivity;
+import com.dingmouren.androiddemo.activity.VibratorActivity;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
@@ -71,23 +72,26 @@ public class MainActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         break;
-                    case 3:
+                    case 3://获取SIM卡信息
                         startActivity(new Intent(MainActivity.this, SIMActivity.class));
                         break;
-                    case 4:
+                    case 4://获取正在运行的服务信息
                         startActivity(new Intent(MainActivity.this, RuningTasksActivity.class));
                         break;
-                    case 5:
+                    case 5://重力感应切换屏幕方向
                         startActivity(new Intent(MainActivity.this, ScreenDirectionActivity.class));
                         break;
-                    case 6:
+                    case 6://显示手机电量
                         startActivity(new Intent(MainActivity.this, BatteryActivity.class));
                         break;
-                    case 7:
+                    case 7://事件分发机制(查看Log)
                         startActivity(new Intent(MainActivity.this, EventActivity.class));
                         break;
-                    case 8:
+                    case 8://RecyclerView进入动画
                         startActivity(new Intent(MainActivity.this, RecyclerCustomAnimationActivity.class));
+                        break;
+                    case 9://6.0权限申请
+                        startActivity(new Intent(MainActivity.this, Demo1Activity.class));
                         break;
                 }
             }
@@ -107,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add("显示手机电量");
         mList.add("事件分发机制（查看Log）");
         mList.add("RecyclerView进入动画");
+        mList.add("6.0权限申请");
         mRecycler.setAdapter(mAdapter);
     }
 

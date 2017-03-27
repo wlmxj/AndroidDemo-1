@@ -1,4 +1,4 @@
-package com.dingmouren.androiddemo.demos;
+package com.dingmouren.androiddemo.activity;
 
 import android.app.ActivityManager;
 import android.os.Bundle;
