@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <!--打电话的权限-->
     <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!--网路权限-->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -48,6 +50,8 @@
         <activity android:name=".activity.RecyclerCustomAnimationActivity"
             android:launchMode="singleTask"/>
         <activity android:name=".activity.Demo1Activity"/>
+        <activity android:name=".activity.Demo2Activity"/>
+        <activity android:name=".activity.Demo3Activity"/>
         <!--广播-->
     </application>
 

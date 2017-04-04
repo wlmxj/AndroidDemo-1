@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.dingmouren.androiddemo.activity.BatteryActivity;
 import com.dingmouren.androiddemo.activity.ContactsActivity;
 import com.dingmouren.androiddemo.activity.Demo1Activity;
+import com.dingmouren.androiddemo.activity.Demo2Activity;
+import com.dingmouren.androiddemo.activity.Demo3Activity;
 import com.dingmouren.androiddemo.activity.EventActivity;
 import com.dingmouren.androiddemo.activity.RecyclerCustomAnimationActivity;
 import com.dingmouren.androiddemo.activity.RuningTasksActivity;
@@ -93,6 +95,12 @@ public class MainActivity extends AppCompatActivity {
                     case 9://6.0权限申请
                         startActivity(new Intent(MainActivity.this, Demo1Activity.class));
                         break;
+                    case 10://Http请求相关
+                        startActivity(new Intent(MainActivity.this, Demo2Activity.class));
+                        break;
+                    case 11://单元测试
+                        startActivity(new Intent(MainActivity.this, Demo3Activity.class));
+                        break;
                 }
             }
         });
@@ -112,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
         mList.add("事件分发机制（查看Log）");
         mList.add("RecyclerView进入动画");
         mList.add("6.0权限申请");
+        mList.add("Http请求相关");
+        mList.add("单元测试");
         mRecycler.setAdapter(mAdapter);
     }
 
