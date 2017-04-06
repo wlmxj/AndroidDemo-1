@@ -66,7 +66,7 @@ public class Demo4Activity extends AppCompatActivity {
         public void removeItem(int position){
             if (mList.size() > 0 && mList != null) {
                 mList.remove(position);
-                notifyDataSetChanged();
+                notifyItemRemoved(position);
             }
         }
         @Override
