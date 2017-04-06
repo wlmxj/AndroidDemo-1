@@ -17,6 +17,7 @@ import com.dingmouren.androiddemo.activity.ContactsActivity;
 import com.dingmouren.androiddemo.activity.Demo1Activity;
 import com.dingmouren.androiddemo.activity.Demo2Activity;
 import com.dingmouren.androiddemo.activity.Demo3Activity;
+import com.dingmouren.androiddemo.activity.Demo4Activity;
 import com.dingmouren.androiddemo.activity.EventActivity;
 import com.dingmouren.androiddemo.activity.RecyclerCustomAnimationActivity;
 import com.dingmouren.androiddemo.activity.RuningTasksActivity;
@@ -101,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
                     case 11://单元测试
                         startActivity(new Intent(MainActivity.this, Demo3Activity.class));
                         break;
+                    case 12://RecyclerView侧滑删除
+                        startActivity(new Intent(MainActivity.this, Demo4Activity.class));
+                        break;
                 }
             }
         });
@@ -122,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add("6.0权限申请");
         mList.add("Http请求相关");
         mList.add("单元测试");
+        mList.add("RecyclerView侧滑删除");
         mRecycler.setAdapter(mAdapter);
     }
 
