@@ -86,8 +86,6 @@ public class RemoveItemRecyclerView extends RecyclerView {
                     mScroller.startScroll(mItemLayout.getScrollX(),0,-mMaxLength,0,200);//删除按钮打开状态的话，触摸就隐藏删除按钮
                     invalidate();
                     mDeleteBtnState = 0;
-                }else {
-                    return false;
                 }
                 break;
             case MotionEvent.ACTION_MOVE:

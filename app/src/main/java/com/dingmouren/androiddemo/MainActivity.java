@@ -21,6 +21,7 @@ import com.dingmouren.androiddemo.activity.Demo4Activity;
 import com.dingmouren.androiddemo.activity.Demo5Activity;
 import com.dingmouren.androiddemo.activity.Demo6Activity;
 import com.dingmouren.androiddemo.activity.Demo7Activity;
+import com.dingmouren.androiddemo.activity.Demo8Activity;
 import com.dingmouren.androiddemo.activity.EventActivity;
 import com.dingmouren.androiddemo.activity.RecyclerCustomAnimationActivity;
 import com.dingmouren.androiddemo.activity.RuningTasksActivity;
@@ -117,6 +118,9 @@ public class MainActivity extends AppCompatActivity {
                     case 15://RecyclerView拖拽效果和侧滑删除
                         startActivity(new Intent(MainActivity.this, Demo7Activity.class));
                         break;
+                    case 16://扫描附近的Wifi接入点，并打印其SSID及其相应的BSSID（MAC地址）和RSSI（信号强度）
+                        startActivity(new Intent(MainActivity.this, Demo8Activity.class));
+                        break;
                 }
             }
         });
@@ -142,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add("自定义滑动开关");
         mList.add("RecyclerView多类型布局");
         mList.add("RecyclerView拖拽效果和侧滑删除");
+        mList.add("扫描附近的Wifi接入点");
         mRecycler.setAdapter(mAdapter);
     }
 

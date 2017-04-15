@@ -15,6 +15,14 @@
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <!--网路权限-->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!--扫描附近的Wifi接入点使用到的权限-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -56,6 +64,7 @@
         <activity android:name=".activity.Demo5Activity"/>
         <activity android:name=".activity.Demo6Activity"/>
         <activity android:name=".activity.Demo7Activity"/>
+        <activity android:name=".activity.Demo8Activity"/>
         <!--广播-->
     </application>
 
